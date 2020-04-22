@@ -1,0 +1,30 @@
+
+Showing logs for build [32mgitops-tx-tx-tutorial-master-cvvkk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-lhdbb[0m
+{"level":"info","ts":1587573895.2287078,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1587573895.229043,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mgitops-tx-tx-tutorial-master-cvvkk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-vfj44[0m
+{"level":"info","ts":1587573895.683711,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1587573895.6846764,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mgitops-tx-tx-tutorial-master-cvvkk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mgitops-tx-tx-tutorial-master-cvvkk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-gitops-tx-tx-tutorial-master-cvvkk-fdz94[0m
+{"level":"info","ts":1587573901.736983,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1587573902.6519492,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/gitops-tx/tx-tutorial.git @ v0.0.2 in path /workspace/source"}
+
+Showing logs for build [32mgitops-tx-tx-tutorial-master-cvvkk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:efcd885eb2c94dab8a2172ae12521d2d82cd09d1
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mgitops-tx-tx-tutorial-master-cvvkk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mgitops-tx-tx-tutorial-master-cvvkk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/tx-tutorial main.go
+
+Showing logs for build [32mgitops-tx-tx-tutorial-master-cvvkk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+error checking push permissions -- make sure you entered the correct tag name, and that you are authenticated correctly, and try again: checking push permission for "661072482170.dkr.ecr.us-east-1.amazonaws.com/gitops-tx/tx-tutorial:0.0.2": unsupported status code 401; body: Not Authorized
+
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
